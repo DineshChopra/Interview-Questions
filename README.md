@@ -1,5 +1,9 @@
 # Interview-Questions
 Interview Questions
 
-## 
-[JavaScript](./general/javascript.md)
+## General
+* [JavaScript](./general/javascript.md)
+
+
+## Companies
+* [Nagarrow](./company/nagarrow.md)
