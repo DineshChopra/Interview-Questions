@@ -1,5 +1,5 @@
 * What are JavaScript Data Types?
-```
+```javascript
 Number
 String
 Boolean
@@ -17,41 +17,44 @@ Undefined
     The basic difference between .call() and .apply() is in the way arguments are passed to the function. Their usage can be illustrated by the given example.
 
     ```javascript
-        var Person = function(name, age) {
-            this.name = name;
-            this.age = age;
-        }
-        var Employee = function(name, age, post) {
-            Person.call(this, name, age);
-            // Person.apply(this, [name, age]);
-            this.post = post;
-        }
-        Employee.prototype = Object.create(Person.prototype);
-        Employee.prototype.display = function() {
-            console.log(`Name: ${this.name}, Age : ${this.age}, Post : ${this.post}`);
-        }
+    var Person = function(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    var Employee = function(name, age, post) {
+        Person.call(this, name, age);
+        // Person.apply(this, [name, age]);
+        this.post = post;
+    }
+    Employee.prototype = Object.create(Person.prototype);
+    Employee.prototype.display = function() {
+        console.log(`Name: ${this.name}, Age : ${this.age}, Post : ${this.post}`);
+    }
 
-        var employee = new Employee('Ram', 20, 'Manager');
-        employee.display();
+    var employee = new Employee('Ram', 20, 'Manager');
+    employee.display();
     ```
     bind : When we want to execute a function with perticular scope then we will use bind
     e.g.
     ```javascript
-        function greeting() {
-            console.log(`Hello ${this.name}`);
-        }
-        var obj = {name: 'Sham'};
-        var greetingRef = greeting.bind(obj);
-        greetingRef();
+    function greeting() {
+        console.log(`Hello ${this.name}`);
+    }
+    var obj = {name: 'Sham'};
+    var greetingRef = greeting.bind(obj);
+    greetingRef();
     ```
 * Difference between Object.assign and object spread.
     Object.assign can mutate existing object
     e.g.
-        var person = {name: 'Ram'};
-        Object.assign(person, {age: 10});
+    ```javascript
+    var person = {name: 'Ram'};
+    Object.assign(person, {age: 10});
+    ```
     spread always creates a new object
-
-        var p = {...person, age: 10};  // p becones {name: 'Ram', age:19}
+    ```javascript
+    var p = {...person, age: 10};  // p becones {name: 'Ram', age:19}
+    ```
     spread operator will not mutate the existing person object.
 * Unordered sub-list. 
 * Difference between new Object(obj) and Object.create(obj).
