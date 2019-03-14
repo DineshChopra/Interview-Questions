@@ -1,4 +1,5 @@
 # Interview-Questions
 Interview Questions
 
-## JavaScript
+## 
+[JavaScript] (./javascript.md)
