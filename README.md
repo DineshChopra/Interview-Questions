@@ -2,4 +2,4 @@
 Interview Questions
 
 ## 
-[JavaScript](.general/javascript.md)
+[JavaScript](./general/javascript.md)
