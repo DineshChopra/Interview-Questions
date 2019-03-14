@@ -1,3 +1,12 @@
+* What are JavaScript Data Types?
+```
+Number
+String
+Boolean
+Object
+Undefined
+```
+
 * Difference between Object.assign and object spread.
 * Unordered sub-list. 
 * Difference between new Object(obj) and Object.create(obj).
