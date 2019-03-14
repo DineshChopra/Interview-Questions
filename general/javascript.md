@@ -16,7 +16,7 @@ Undefined
     The function .call() and .apply() are very similar in their usage except a little difference. .call() is used when the number of the function's arguments are known to the programmer, as they have to be mentioned as arguments in the call statement. On the other hand, .apply() is used when the number is not known. The function .apply() expects the argument to be an array.
     The basic difference between .call() and .apply() is in the way arguments are passed to the function. Their usage can be illustrated by the given example.
 
-    ```
+    ```javascript
         var Person = function(name, age) {
             this.name = name;
             this.age = age;
@@ -36,7 +36,7 @@ Undefined
     ```
     bind : When we want to execute a function with perticular scope then we will use bind
     e.g.
-    ```
+    ```javascript
         function greeting() {
             console.log(`Hello ${this.name}`);
         }
@@ -85,25 +85,25 @@ Undefined
 * what is the difference between for-in and for-of loop
     The for-in loop is used to loop through the properties of an object.
     e.g.
-```
-var testObj = {name: 'Ram', age: 10};
-for(let key in testObj) {
-    console.log(`${key} : ${testObj[key]}`);
-}
-// output : 
-name : Ram
-age : 10
-```
+    ```javascript
+    var testObj = {name: 'Ram', age: 10};
+    for(let key in testObj) {
+        console.log(`${key} : ${testObj[key]}`);
+    }
+    // output : 
+    name : Ram
+    age : 10
+    ```
     The for-of loop is used to loop an array
     e.g.
-```
-var testArray = [1,2,3]
-var sum = 0;
-for(let item of testArray) {
-    sum += item;    // item is 1,2,3
-}
-console.log(sum);
-// output is 6
-```
+    ```javascript
+    var testArray = [1,2,3]
+    var sum = 0;
+    for(let item of testArray) {
+        sum += item;    // item is 1,2,3
+    }
+    console.log(sum);
+    // output is 6
+    ```
 
 
