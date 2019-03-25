@@ -1,3 +1,4 @@
+
 * What are JavaScript Data Types?
 ```javascript
 Number
@@ -60,10 +61,12 @@ Undefined
 * Difference between new Object(obj) and Object.create(obj).
 * Difference between var and let.
 * Difference between arrow function and normal function.
+    Arrow functions don't have their own this or arguments binding. Instead, those identifiers are resolved in the lexical scope like any other variable. That means that inside an arrow function, this and arguments refer to the values of this and arguments in the environment the arrow function is defined 
+    Normal functions have their own scope and their arguments
 
 
 * What is spread operator and rest operator.
-* What is event loop.
+* What is event loop. [Youtube Link](https://www.youtube.com/watch?v=8aGhZQkoFbQ&t=1358s)
 * What is Event bubbling and Event capturing?.
 * What is closures? How you are using it in your project?.
 
@@ -109,4 +112,70 @@ Undefined
     // output is 6
     ```
 
+## ES6 New features
+
+* Default parameter in ES6
+
+    ```javascript
+    function display(name = 'Ram') {
+        console.log(name);
+    }
+
+    display(); // output is Ram
+    display('Sham'); // output is Sham
+
+    ```
+* Template Literals in ES6
+    It is used for multi line string. We can use variable value in literal string, which is called interpolation.
+```javascript
+    let name = 'Ram'
+    let messag = `
+        Hello 
+        How are you?
+        My name is ${name}
+        `;
+```
+
+* Destructuring Assignment in ES6
+```javascript
+    var obj = {
+        name: 'Ram',
+        age: 10,
+        title: 'Kumar'
+    };
+
+    const {name, age} = obj;
+    // name = Ram and age = 10
+    // We can change the property name as below
+    const {name: firstName} = obj;
+    console.log(firstName); // prints Ram
+
+```
+We can change the property name 
+
+* Arrow Functions in ES6
+* Promises in ES6
+* Block-Scoped Constructs Let and Const
+* Classes in ES6
+* Modules in ES6
+* spread and rest operator
+```javascript
+    // Example of spread operator
+    var obj = {name: 'Ram'};
+    var newObj = {...obj}; // spread operator
+
+    // When you dont know exact number of arguments then you can use rest operator
+    // Example of rest operator
+    function display(...persons) {
+        for(let p of persons) {
+            console.log(p);
+        }
+    }
+
+    display('Ram', 'Sham');
+    display('Ram', 'Sham', 'Pankaj', 'Madhav');
+```
+* New data structures like Map and Set
+
+For more information about ES6 new feature [click](https://webapplog.com/es6/) here
 
