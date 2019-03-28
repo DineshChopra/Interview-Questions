@@ -128,6 +128,7 @@ var f = 10;
 let x, {x: y = 1} = {x}; y; 
 */
 // Question --- 13
+/*
 var out = (function () {
     let f = this ? class g { } : class h { };
     console.log('f -- ', f);
@@ -138,4 +139,4 @@ var out = (function () {
 })(); 
 console.log(out);
 // output: ['function', 'undefined']
-  
+*/
